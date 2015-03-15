@@ -1,6 +1,12 @@
 {
     "name": "overtrue/laravel-pinyin",
     "description": "Chinese to Pinyin translator.",
+    "keywords": [
+        "laravel",
+        "pinyin",
+        "chinese",
+        "overtrue"
+    ],
     "require": {
         "overtrue/pinyin": "*"
     },
