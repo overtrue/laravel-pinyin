@@ -63,7 +63,7 @@ echo letter('带着希望去旅行，比到达终点更美好');
 // d z x w q l x b d d z d g m h
 ```
 
-About `overtrue/pinyin` specific configuration and use, refer to: https://github.com/overtrue/pinyin
+About `overtrue/pinyin` specific configuration and use, refer to: [overtrue/pinyin](https://github.com/overtrue/pinyin)
 
 # License
 
