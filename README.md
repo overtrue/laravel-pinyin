@@ -4,7 +4,7 @@ Chinese to Pinyin translator for Laravel 5 based on [overtrue/pinyin](https://gi
 
 [![Latest Stable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/stable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Total Downloads](https://poser.pugx.org/overtrue/laravel-pinyin/downloads.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Latest Unstable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/unstable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![License](https://poser.pugx.org/overtrue/laravel-pinyin/license.svg)](https://packagist.org/packages/overtrue/laravel-pinyin)
 
-# Install
+## Install
 
 ```shell
 composer require "overtrue/laravel-pinyin:dev-master"
@@ -28,7 +28,7 @@ After completion of the above, add the following line to the section `providers`
 'Overtrue\LaravelPinyin\ServiceProvider',
 ```
 
-# Configuration
+## Configuration
 
 you can publish the config file to `config/pinyin.php`:
 
@@ -36,7 +36,7 @@ you can publish the config file to `config/pinyin.php`:
 php artisan vendor:publish --provider="Overtrue\LaravelPinyin\ServiceProvider" --tag="config"
 ```
 
-# Usage
+## Usage
 
 you can get the instance of `Overtrue\Pinyin\Pinyin` from app container:
 
@@ -75,6 +75,6 @@ echo letter('带着希望去旅行，比到达终点更美好');
 
 About `overtrue/pinyin` specific configuration and use, refer to: [overtrue/pinyin](https://github.com/overtrue/pinyin)
 
-# License
+## License
 
 MIT
