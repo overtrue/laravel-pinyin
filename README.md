@@ -39,7 +39,7 @@ php artisan vendor:publish --provider="Overtrue\LaravelPinyin\ServiceProvider" -
 you can get the instance of `Overtrue\Pinyin\Pinyin` from app container:
 
 ```php
-<?php
+
 $pinyin = App::make('pinyin');
 echo $pinyin->pinyin('带着希望去旅行，比到达终点更美好');
 // dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
