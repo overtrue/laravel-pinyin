@@ -2,6 +2,8 @@
 
 Chinese to Pinyin translator for Laravel 5 based on [overtrue/pinyin](https://github.com/overtrue/pinyin).
 
+[![Latest Stable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/stable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Total Downloads](https://poser.pugx.org/overtrue/laravel-pinyin/downloads.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Latest Unstable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/unstable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![License](https://poser.pugx.org/overtrue/laravel-pinyin/license.svg)](https://packagist.org/packages/overtrue/laravel-pinyin)
+
 # Install
 
 ```shell
