@@ -47,6 +47,14 @@ echo $pinyin->pinyin('带着希望去旅行，比到达终点更美好');
 
 or use facade `Pinyin`:
 
+add the following line to section `aliases` of you project's `config/app.php` file:
+
+```php
+'Pinyin'    => 'Overtrue\Pinyin\Pinyin',
+```
+
+then
+
 ```php
 echo Pinyin::pinyin('带着希望去旅行，比到达终点更美好');
 // dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
