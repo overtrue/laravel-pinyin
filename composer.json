@@ -1,0 +1,22 @@
+{
+    "name": "overtrue/laravel-pinyin",
+    "description": "Chinese to Pinyin translator.",
+    "require": {
+        "overtrue/pinyin": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Overtrue\\LaravelPinyin\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "overtrue",
+            "email": "anzhengchao@gmail.com"
+        }
+    ]
+}
