@@ -12,7 +12,7 @@ if (! function_exists('pinyin')) {
      *
      * @return string
      */
-    public function pinyin($string, $setting = [])
+    function pinyin($string, $setting = [])
     {
         return Pinyin::pinyin($string, $setting);
     }
@@ -29,7 +29,7 @@ if (! function_exists('letter')) {
      *
      * @return string
      */
-    public function letter($string, $setting = [])
+    function letter($string, $setting = [])
     {
         return Pinyin::letter($string, $setting);
     }
