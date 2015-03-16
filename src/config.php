@@ -12,11 +12,6 @@ return [
           'delimiter'    => ' ',
 
           /**
-           * The content needs to be translated is Traditional Chinese.
-           */
-          'traditional'  => false,
-
-          /**
            * Output with tone symbol.
            *
            * true: dài

@@ -43,7 +43,7 @@ you can get the instance of `Overtrue\Pinyin\Pinyin` from app container:
 ```php
 
 $pinyin = App::make('pinyin');
-echo $pinyin->pinyin('带着希望去旅行，比到达终点更美好');
+echo $pinyin->trans('带着希望去旅行，比到达终点更美好');
 // dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
 ```
 
@@ -58,7 +58,7 @@ add the following line to section `aliases` of you project's `config/app.php` fi
 then
 
 ```php
-echo Pinyin::pinyin('带着希望去旅行，比到达终点更美好');
+echo Pinyin::trans('带着希望去旅行，比到达终点更美好');
 // dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
 echo Pinyin::letter('带着希望去旅行，比到达终点更美好');
 // d z x w q l x b d d z d g m h

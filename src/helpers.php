@@ -14,7 +14,7 @@ if (! function_exists('pinyin')) {
      */
     function pinyin($string, $setting = [])
     {
-        return Pinyin::pinyin($string, $setting);
+        return Pinyin::trans($string, $setting);
     }
 } else {
     Log::warning('There exist multiple function "pinyin".');
