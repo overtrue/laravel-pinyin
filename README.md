@@ -60,17 +60,38 @@ then
 ```php
 echo Pinyin::trans('带着希望去旅行，比到达终点更美好');
 // dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
+
 echo Pinyin::letter('带着希望去旅行，比到达终点更美好');
 // d z x w q l x b d d z d g m h
+
+echo Pinyin::parse('带着希望去旅行，比到达终点更美好');
+// array(
+//  'src'    => '带着希望去旅行，比到达终点更美好',
+//  'pinyin' => 'dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo',
+//  'letter' => 'd z x w q l x b d d z d g m h',
+// );
 ```
 
-There are more convenient:
+There are more convenient functions:
+
+|  function      | method                                                |
+| -------------  | --------------------------------------------------- |
+| `pinyin()`     | `Pinyin::trans()`                              |
+| `letter()`     | `Pinyin::letter()`                                        |
+| `pinyin_and_letter` | `Pinyin::parse()`                         |
 
 ```php
 echo pinyin('带着希望去旅行，比到达终点更美好');
 // dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
 echo letter('带着希望去旅行，比到达终点更美好');
 // d z x w q l x b d d z d g m h
+//当前也可以两个同时获取
+echo pinyin\_and\_letter('带着希望去旅行，比到达终点更美好');
+// array(
+//  'src'    => '带着希望去旅行，比到达终点更美好',
+//  'pinyin' => 'dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo',
+//  'letter' => 'd z x w q l x b d d z d g m h',
+// );
 ```
 
 About `overtrue/pinyin` specific configuration and use, refer to: [overtrue/pinyin](https://github.com/overtrue/pinyin)
