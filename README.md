@@ -86,7 +86,7 @@ echo pinyin('带着希望去旅行，比到达终点更美好');
 echo letter('带着希望去旅行，比到达终点更美好');
 // d z x w q l x b d d z d g m h
 //当前也可以两个同时获取
-echo pinyin\_and\_letter('带着希望去旅行，比到达终点更美好');
+echo pinyin_and_letter('带着希望去旅行，比到达终点更美好');
 // array(
 //  'src'    => '带着希望去旅行，比到达终点更美好',
 //  'pinyin' => 'dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo',
