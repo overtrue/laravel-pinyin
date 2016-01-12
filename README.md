@@ -1,6 +1,6 @@
 # Laravel-pinyin
 
-Chinese to Pinyin translator for Laravel 5 based on [overtrue/pinyin](https://github.com/overtrue/pinyin).
+Chinese to Pinyin translator for Laravel5 / Lumen based on [overtrue/pinyin](https://github.com/overtrue/pinyin).
 
 [![Latest Stable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/stable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Total Downloads](https://poser.pugx.org/overtrue/laravel-pinyin/downloads.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Latest Unstable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/unstable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![License](https://poser.pugx.org/overtrue/laravel-pinyin/license.svg)](https://packagist.org/packages/overtrue/laravel-pinyin)
 
@@ -22,19 +22,43 @@ then
 ```shell
 composer update
 ```
-After completion of the above, add the following line to the section `providers` of `config/app.php`:
+
+## For Laravel
+
+Add the following line to the section `providers` of `config/app.php`:
 
 ```php
 'Overtrue\LaravelPinyin\ServiceProvider',
 ```
 
-## Configuration
+### config file
 
 you can publish the config file to `config/pinyin.php`:
 
 ```php
 php artisan vendor:publish --provider="Overtrue\LaravelPinyin\ServiceProvider" --tag="config"
 ```
+
+## For Lumen
+
+Add the following line to `bootstrap/app.php` after `// $app->withEloquent();`
+
+```php
+...
+// $app->withEloquent();
+
+$app->register(Overtrue\LaravelPinyin\ServiceProvider::class);
+...
+```
+
+## configuration
+
+| .env | config/pinyin.php | default | description |
+| `PINYIN_DELIMITER` | delimiter | `" "` | Symbol for stitching each pinyin. `'-' =>  dài-zhe-xī-wàng-qù-lǔ-xíng` |
+| PINYIN_ACCENT | accent | `true` | Output with tone symbol. |
+| PINYIN_ONLY_CHINESE | only_chinese | `true` | Leaving only the Chinese characters. |
+| PINYIN_UPPERCASE | uppercase | `true` | Output uppercase(letter) |
+
 
 ## Usage
 

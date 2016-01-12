@@ -9,7 +9,7 @@ return [
            *   '':  dàizhexīwàngqùlǔxíng
            *   '-'  dài-zhe-xī-wàng-qù-lǔ-xíng
            */
-          'delimiter'    => ' ',
+          'delimiter'    => env('PINYIN_DELIMITER', ' '),
 
           /**
            * Output with tone symbol.
@@ -17,7 +17,7 @@ return [
            * true: dài
            * false: dai
            */
-          'accent'       => true,
+          'accent'       => env('PINYIN_ACCENT', true),
 
           /**
            * Leaving only the Chinese characters.
@@ -29,10 +29,10 @@ return [
            * true:  dài zhe xī wàng qù lǔ xíng
            * false: dài zhe xī wàng %￥@ qù lǔ xíng
            */
-          'only_chinese' => false,
+          'only_chinese' => env('PINYIN_ONLY_CHINESE', true),
 
           /**
            * Output uppercase.
            */
-          'uppercase'    => false
+          'uppercase'    => env('PINYIN_UPPERCASE', false)
         ];
