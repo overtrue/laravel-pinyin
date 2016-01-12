@@ -51,7 +51,7 @@ $app->register(Overtrue\LaravelPinyin\ServiceProvider::class);
 ...
 ```
 
-## configuration
+## Configuration
 
 | .env | config/pinyin.php | default | description |
 | --- | --- | --- | --- |
