@@ -54,6 +54,7 @@ $app->register(Overtrue\LaravelPinyin\ServiceProvider::class);
 ## configuration
 
 | .env | config/pinyin.php | default | description |
+| --- | --- | --- | --- |
 | `PINYIN_DELIMITER` | delimiter | `" "` | Symbol for stitching each pinyin. `'-' =>  dài-zhe-xī-wàng-qù-lǔ-xíng` |
 | PINYIN_ACCENT | accent | `true` | Output with tone symbol. |
 | PINYIN_ONLY_CHINESE | only_chinese | `true` | Leaving only the Chinese characters. |
