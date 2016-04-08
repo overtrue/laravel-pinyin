@@ -28,7 +28,9 @@ composer update
 Add the following line to the section `providers` of `config/app.php`:
 
 ```php
-'Overtrue\LaravelPinyin\ServiceProvider',
+...
+Overtrue\LaravelPinyin\ServiceProvider::class,
+...
 ```
 
 ### config file
@@ -58,7 +60,7 @@ $app->register(Overtrue\LaravelPinyin\ServiceProvider::class);
 | `PINYIN_DELIMITER` | delimiter | `" "` | Symbol for stitching each pinyin. `'-' =>  dài-zhe-xī-wàng-qù-lǔ-xíng` |
 | PINYIN_ACCENT | accent | `true` | Output with tone symbol. |
 | PINYIN_ONLY_CHINESE | only_chinese | `true` | Leaving only the Chinese characters. |
-| PINYIN_UPPERCASE | uppercase | `true` | Output uppercase(letter) |
+| PINYIN_UPPERCASE | uppercase | `false` | Output uppercase(letter) |
 
 
 ## Usage
