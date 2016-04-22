@@ -7,20 +7,7 @@ Chinese to Pinyin translator for Laravel5 / Lumen based on [overtrue/pinyin](htt
 ## Install
 
 ```shell
-composer require "overtrue/laravel-pinyin:dev-master"
-```
-
-or add the following line to your project's `composer.json`:
-
-```json
-"require": {
-    "overtrue/laravel-pinyin": "dev-master"
-}
-```
-then
-
-```shell
-composer update
+composer require "overtrue/laravel-pinyin:~3.0"
 ```
 
 ## For Laravel
@@ -31,14 +18,6 @@ Add the following line to the section `providers` of `config/app.php`:
 ...
 Overtrue\LaravelPinyin\ServiceProvider::class,
 ...
-```
-
-### config file
-
-you can publish the config file to `config/pinyin.php`:
-
-```php
-php artisan vendor:publish --provider="Overtrue\LaravelPinyin\ServiceProvider" --tag="config"
 ```
 
 ## For Lumen
@@ -53,73 +32,33 @@ $app->register(Overtrue\LaravelPinyin\ServiceProvider::class);
 ...
 ```
 
-## Configuration
-
-| .env | config/pinyin.php | default | description |
-| --- | --- | --- | --- |
-| `PINYIN_DELIMITER` | delimiter | `" "` | Symbol for stitching each pinyin. `'-' =>  dài-zhe-xī-wàng-qù-lǔ-xíng` |
-| PINYIN_ACCENT | accent | `true` | Output with tone symbol. |
-| PINYIN_ONLY_CHINESE | only_chinese | `true` | Leaving only the Chinese characters. |
-| PINYIN_UPPERCASE | uppercase | `false` | Output uppercase(letter) |
-
-
 ## Usage
 
 you can get the instance of `Overtrue\Pinyin\Pinyin` from app container:
 
 ```php
 
-$pinyin = App::make('pinyin');
-echo $pinyin->trans('带着希望去旅行，比到达终点更美好');
-// dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
-```
-
-or use facade `Pinyin`:
-
-add the following line to the section `aliases` of you project's `config/app.php` file:
-
-```php
-'Pinyin'    => 'Overtrue\Pinyin\Pinyin',
-```
-
-then
-
-```php
-echo Pinyin::trans('带着希望去旅行，比到达终点更美好');
-// dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
-
-echo Pinyin::letter('带着希望去旅行，比到达终点更美好');
-// d z x w q l x b d d z d g m h
-
-echo Pinyin::parse('带着希望去旅行，比到达终点更美好');
-// array(
-//  'src'    => '带着希望去旅行，比到达终点更美好',
-//  'pinyin' => 'dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo',
-//  'letter' => 'd z x w q l x b d d z d g m h',
-// );
+$pinyin = app('pinyin');
+echo $pinyin->sentence('带着希望去旅行，比到达终点更美好');
+// dài zhe xī wàng qù lǔ xíng, bǐ dào dá zhōng diǎn gèng měi hǎo
 ```
 
 There are more convenient functions:
 
 |  function      | method                                                |
 | -------------  | --------------------------------------------------- |
-| `pinyin()`     | `Pinyin::trans()`                              |
-| `letter()`     | `Pinyin::letter()`                                        |
-| `pinyin_and_letter` | `Pinyin::parse()`                         |
+| `pinyin()`     | `app('pinyin')->convert()`                              |
+| `pinyin_abbr()`     | `app('pinyin')->abbr()`                                        |
+| `pinyin_permlink` | `app('pinyin')->permlink()`                         |
+| `pinyin_sentence` | `app('pinyin')->sentence()`                         |
 
 ```php
 echo pinyin('带着希望去旅行，比到达终点更美好');
-// dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo
+// ["dai", "zhe", "xi", "wang", "qu", "lu", "xing", "bi", "dao", "da", "zhong", "dian", "geng", "mei", "hao"]
 
-echo letter('带着希望去旅行，比到达终点更美好');
-// d z x w q l x b d d z d g m h
-
-echo pinyin_and_letter('带着希望去旅行，比到达终点更美好');
-// array(
-//  'src'    => '带着希望去旅行，比到达终点更美好',
-//  'pinyin' => 'dài zhe xī wàng qù lǔ xíng bǐ dào dá zhōng diǎn gèng měi hǎo',
-//  'letter' => 'd z x w q l x b d d z d g m h',
-// );
+echo pinyin_abbr('带着希望去旅行');
+// dzxwqlx
+...
 ```
 
 About `overtrue/pinyin` specific configuration and use, refer to: [overtrue/pinyin](https://github.com/overtrue/pinyin)

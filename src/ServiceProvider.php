@@ -14,11 +14,7 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function boot()
     {
-        if (function_exists('config_path')) {
-            $this->publishes([
-                __DIR__ . '/config.php' => config_path('pinyin.php'),
-            ], 'config');
-        }
+        //
     }
 
     /**
@@ -28,15 +24,9 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/config.php', 'pinyin'
-        );
-
-        Pinyin::settings(config('pinyin', []));
-
         $this->app->singleton('pinyin', function($app)
         {
-            return Pinyin::getInstance();
+            return new Pinyin();
         });
     }
 }
