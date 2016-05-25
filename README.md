@@ -49,12 +49,12 @@ There are more convenient functions:
 | -------------  | --------------------------------------------------- |
 | `pinyin()`     | `app('pinyin')->convert()`                              |
 | `pinyin_abbr()`     | `app('pinyin')->abbr()`                                        |
-| `pinyin_permlink` | `app('pinyin')->permlink()`                         |
+| `pinyin_permalink` | `app('pinyin')->permalink()`                         |
 | `pinyin_sentence` | `app('pinyin')->sentence()`                         |
 
 ```php
 echo pinyin('带着希望去旅行，比到达终点更美好');
-// ["dai", "zhe", "xi", "wang", "qu", "lu", "xing", "bi", "dao", "da", "zhong", "dian", "geng", "mei", "hao"]
+// ["dai", "zhe", "xi", "wang", "qu", "lv", "xing", "bi", "dao", "da", "zhong", "dian", "geng", "mei", "hao"]
 
 echo pinyin_abbr('带着希望去旅行');
 // dzxwqlx

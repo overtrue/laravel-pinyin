@@ -34,7 +34,7 @@ if (! function_exists('pinyin_abbr')) {
         return app('pinyin')->abbr($string, $delimiter);
     }
 } else {
-    Log::warning('There exist multiple function "letter".');
+    Log::warning('There exist multiple function "pinyin_abbr".');
 }
 
 if (! function_exists('pinyin_permlink')) {
@@ -45,6 +45,8 @@ if (! function_exists('pinyin_permlink')) {
      * @param  string $delimiter
      *
      * @return string
+     *
+     * @deprecated since version 3.0.1. Use the "pinyin_permalink" method instead.
      */
     function pinyin_permlink($string, $delimiter = '-')
     {
@@ -85,5 +87,5 @@ if (! function_exists('pinyin_sentence')) {
         return app('pinyin')->sentence($string, $tone);
     }
 } else {
-    Log::warning('There exist multiple function "pinyin_and_letter".');
+    Log::warning('There exist multiple function "pinyin_sentence".');
 }
