@@ -39,7 +39,7 @@ if (! function_exists('pinyin_abbr')) {
 
 if (! function_exists('pinyin_permlink')) {
     /**
-     * Get the fist pinyin and letters of given string.
+     * Get a pinyin permalink from string.
      *
      * @param  string $string
      * @param  string $delimiter
@@ -48,10 +48,27 @@ if (! function_exists('pinyin_permlink')) {
      */
     function pinyin_permlink($string, $delimiter = '-')
     {
-        return app('pinyin')->permlink($string, $delimiter);
+        return app('pinyin')->permalink($string, $delimiter);
     }
 } else {
-    Log::warning('There exist multiple function "pinyin_and_letter".');
+    Log::warning('There exist multiple function "pinyin_permlink".');
+}
+
+if (! function_exists('pinyin_permalink')) {
+    /**
+     * Get a pinyin permalink from string.
+     *
+     * @param  string $string
+     * @param  string $delimiter
+     *
+     * @return string
+     */
+    function pinyin_permalink($string, $delimiter = '-')
+    {
+        return app('pinyin')->permalink($string, $delimiter);
+    }
+} else {
+    Log::warning('There exist multiple function "pinyin_permalink".');
 }
 
 if (! function_exists('pinyin_sentence')) {
