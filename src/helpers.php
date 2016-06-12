@@ -12,9 +12,9 @@ if (! function_exists('pinyin')) {
      *
      * @return string
      */
-    function pinyin($string, $option = PINYIN_NONE)
+    function pinyin($string, $option = Pinyin::NONE)
     {
-        return app('pinyin')->convert($string, $option);
+        return app(Pinyin::class)->convert($string, $option);
     }
 } else {
     Log::warning('There exist multiple function "pinyin".');
@@ -31,7 +31,7 @@ if (! function_exists('pinyin_abbr')) {
      */
     function pinyin_abbr($string, $delimiter = '')
     {
-        return app('pinyin')->abbr($string, $delimiter);
+        return app(Pinyin::class)->abbr($string, $delimiter);
     }
 } else {
     Log::warning('There exist multiple function "pinyin_abbr".');
@@ -50,7 +50,7 @@ if (! function_exists('pinyin_permlink')) {
      */
     function pinyin_permlink($string, $delimiter = '-')
     {
-        return app('pinyin')->permalink($string, $delimiter);
+        return app(Pinyin::class)->permalink($string, $delimiter);
     }
 } else {
     Log::warning('There exist multiple function "pinyin_permlink".');
@@ -67,7 +67,7 @@ if (! function_exists('pinyin_permalink')) {
      */
     function pinyin_permalink($string, $delimiter = '-')
     {
-        return app('pinyin')->permalink($string, $delimiter);
+        return app(Pinyin::class)->permalink($string, $delimiter);
     }
 } else {
     Log::warning('There exist multiple function "pinyin_permalink".');
@@ -84,7 +84,7 @@ if (! function_exists('pinyin_sentence')) {
      */
     function pinyin_sentence($string, $tone = false)
     {
-        return app('pinyin')->sentence($string, $tone);
+        return app(Pinyin::class)->sentence($string, $tone);
     }
 } else {
     Log::warning('There exist multiple function "pinyin_sentence".');

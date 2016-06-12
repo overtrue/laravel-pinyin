@@ -8,6 +8,13 @@ use Overtrue\Pinyin\Pinyin;
 class ServiceProvider extends LaravelServiceProvider
 {
     /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = true;
+
+    /**
      * Boot the provider.
      *
      * @return void
@@ -24,9 +31,19 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('pinyin', function($app)
+        $this->app->singleton([Pinyin::class => 'pinyin'], function($app)
         {
             return new Pinyin();
         });
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [Pinyin::class, 'pinyin'];
     }
 }

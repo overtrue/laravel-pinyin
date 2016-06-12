@@ -15,9 +15,20 @@ composer require "overtrue/laravel-pinyin:~3.0"
 Add the following line to the section `providers` of `config/app.php`:
 
 ```php
-...
-Overtrue\LaravelPinyin\ServiceProvider::class,
-...
+'providers' => [
+    //...
+    Overtrue\LaravelPinyin\ServiceProvider::class,
+],
+```
+
+as optional, you can use facade:
+
+```php
+
+'aliases' => [
+    //...
+    'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
+],
 ```
 
 ## For Lumen
@@ -53,12 +64,25 @@ There are more convenient functions:
 | `pinyin_sentence` | `app('pinyin')->sentence()`                         |
 
 ```php
-echo pinyin('带着希望去旅行，比到达终点更美好');
+var_dump(pinyin('带着希望去旅行，比到达终点更美好'));
 // ["dai", "zhe", "xi", "wang", "qu", "lv", "xing", "bi", "dao", "da", "zhong", "dian", "geng", "mei", "hao"]
 
-echo pinyin_abbr('带着希望去旅行');
+var_dump(pinyin_abbr('带着希望去旅行'));
 // dzxwqlx
 ...
+```
+
+Using facade:
+
+```php
+use Pinyin; // Facade class, NOT Overtrue\Pinyin\Pinyin
+
+var_dump(Pinyin::convert('带着希望去旅行'));
+// ["dai", "zhe", "xi", "wang", "qu", "lv", "xing"]
+
+echo Pinyin::sentence('带着希望去旅行，比到达终点更美好');
+// dài zhe xī wàng qù lǔ xíng, bǐ dào dá zhōng diǎn gèng měi hǎo
+
 ```
 
 About `overtrue/pinyin` specific configuration and use, refer to: [overtrue/pinyin](https://github.com/overtrue/pinyin)
