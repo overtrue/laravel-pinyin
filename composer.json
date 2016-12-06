@@ -2,7 +2,7 @@
     "name": "overtrue/laravel-pinyin",
     "description": "Chinese to Pinyin translator.",
     "require": {
-        "overtrue/pinyin": "*"
+        "overtrue/pinyin": "~2.0"
     },
     "autoload": {
         "psr-4": {
