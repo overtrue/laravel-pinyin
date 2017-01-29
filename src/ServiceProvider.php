@@ -15,26 +15,18 @@ class ServiceProvider extends LaravelServiceProvider
     protected $defer = true;
 
     /**
-     * Boot the provider.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
-    }
-
-    /**
      * Register the provider.
      *
      * @return void
      */
     public function register()
     {
-        $this->app->singleton([Pinyin::class => 'pinyin'], function($app)
+        $this->app->singleton(Pinyin::class, function($app)
         {
             return new Pinyin();
         });
+
+        $this->app->alias(Pinyin::class, 'pinyin');
     }
 
     /**
