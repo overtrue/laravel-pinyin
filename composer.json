@@ -18,6 +18,16 @@
             "src/helpers.php"
         ]
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Overtrue\\LaravelPinyin\\ServiceProvider"
+            ],
+            "aliases": {
+                "Pinyin": "Overtrue\\LaravelPinyin\\Facades\\Pinyin"
+            }
+        }
+    },
     "license": "MIT",
     "authors": [
         {
