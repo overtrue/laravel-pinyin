@@ -1,14 +1,23 @@
 <?php
 
+/*
+ * This file is part of the overtrue/laravel-pinyin.
+ *
+ * (c) overtrue <i@overtrue.me>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 use Illuminate\Support\Facades\Log;
 use Overtrue\Pinyin\Pinyin;
 
-if (! function_exists('pinyin')) {
+if (!function_exists('pinyin')) {
     /**
      * Get the Pinyin of given string.
      *
-     * @param  string $string
-     * @param  string $option
+     * @param string $string
+     * @param string $option
      *
      * @return string
      */
@@ -20,12 +29,12 @@ if (! function_exists('pinyin')) {
     Log::warning('There exist multiple function "pinyin".');
 }
 
-if (! function_exists('pinyin_abbr')) {
+if (!function_exists('pinyin_abbr')) {
     /**
      * Get the fist letters of given string.
      *
-     * @param  string $string
-     * @param  string $delimiter
+     * @param string $string
+     * @param string $delimiter
      *
      * @return string
      */
@@ -37,12 +46,12 @@ if (! function_exists('pinyin_abbr')) {
     Log::warning('There exist multiple function "pinyin_abbr".');
 }
 
-if (! function_exists('pinyin_permlink')) {
+if (!function_exists('pinyin_permlink')) {
     /**
      * Get a pinyin permalink from string.
      *
-     * @param  string $string
-     * @param  string $delimiter
+     * @param string $string
+     * @param string $delimiter
      *
      * @return string
      *
@@ -56,12 +65,12 @@ if (! function_exists('pinyin_permlink')) {
     Log::warning('There exist multiple function "pinyin_permlink".');
 }
 
-if (! function_exists('pinyin_permalink')) {
+if (!function_exists('pinyin_permalink')) {
     /**
      * Get a pinyin permalink from string.
      *
-     * @param  string $string
-     * @param  string $delimiter
+     * @param string $string
+     * @param string $delimiter
      *
      * @return string
      */
@@ -73,12 +82,12 @@ if (! function_exists('pinyin_permalink')) {
     Log::warning('There exist multiple function "pinyin_permalink".');
 }
 
-if (! function_exists('pinyin_sentence')) {
+if (!function_exists('pinyin_sentence')) {
     /**
      * Get the fist pinyin and letters of given string.
      *
-     * @param  string $string
-     * @param  string $tone
+     * @param string $string
+     * @param string $tone
      *
      * @return string
      */
