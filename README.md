@@ -51,8 +51,17 @@ you can get the instance of `Overtrue\Pinyin\Pinyin` from app container:
 
 $pinyin = app('pinyin');
 echo $pinyin->sentence('带着希望去旅行，比到达终点更美好');
-// dài zhe xī wàng qù lǔ xíng, bǐ dào dá zhōng diǎn gèng měi hǎo
+// dai zhe xi wang qu lv xing, bi dao da zhong dian geng mei hao!
+
+$pinyin = app('pinyin');
+
+// return a string in UNICODE 
+echo Pinyin::sentence('带着希望去旅行，比到达终点更美好！', true);
+//dài zhe xī wàng qù lǚ xíng, bǐ dào dá zhōng diǎn gèng měi hǎo!
+
+
 ```
+
 
 There are more convenient functions:
 
