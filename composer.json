@@ -8,7 +8,7 @@
         "overtrue"
     ],
     "require": {
-        "overtrue/pinyin": "~3.0"
+        "overtrue/pinyin": "~4.0"
     },
     "autoload": {
         "psr-4": {
