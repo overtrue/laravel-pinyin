@@ -14,6 +14,8 @@ composer require "overtrue/laravel-pinyin:~4.0"
 
 ## For Laravel
 
+(If you are using Laravel >= 5.5, the auto-discovery feature will handle these two steps for you.)
+
 Add the following line to the section `providers` of `config/app.php`:
 
 ```php
