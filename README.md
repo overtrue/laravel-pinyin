@@ -4,6 +4,8 @@ Chinese to Pinyin translator for Laravel5 / Lumen based on [overtrue/pinyin](htt
 
 [![Latest Stable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/stable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Total Downloads](https://poser.pugx.org/overtrue/laravel-pinyin/downloads.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Latest Unstable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/unstable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![License](https://poser.pugx.org/overtrue/laravel-pinyin/license.svg)](https://packagist.org/packages/overtrue/laravel-pinyin)
 
+[![Sponsor me](https://raw.githubusercontent.com/overtrue/overtrue/master/sponsor-me-button-s.svg)](https://github.com/sponsors/overtrue)
+
 ## Install
 
 ```shell
@@ -89,7 +91,7 @@ About `overtrue/pinyin` specific configuration and use, refer to: [overtrue/piny
 
 ## :heart: Sponsor me 
 
-If you like the work I do and want to support it, [you know what to do :heart:](https://github.com/sponsors/overtrue)
+[![Sponsor me](https://raw.githubusercontent.com/overtrue/overtrue/master/sponsor-me.svg)](https://github.com/sponsors/overtrue)
 
 如果你喜欢我的项目并想支持它，[点击这里 :heart:](https://github.com/sponsors/overtrue)
 
