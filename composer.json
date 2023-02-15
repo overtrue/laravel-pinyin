@@ -1,38 +1,43 @@
 {
-    "name": "overtrue/laravel-pinyin",
-    "description": "Chinese to Pinyin translator.",
-    "keywords": [
-        "laravel",
-        "pinyin",
-        "chinese",
-        "overtrue"
-    ],
-    "require": {
-        "overtrue/pinyin": "~4.0"
+  "name": "overtrue/laravel-pinyin",
+  "description": "Chinese to Pinyin translator.",
+  "keywords": [
+    "laravel",
+    "pinyin",
+    "chinese",
+    "overtrue"
+  ],
+  "require": {
+    "laravel/framework": "^9.0|^10.0",
+    "overtrue/pinyin": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Overtrue\\LaravelPinyin\\": "src/"
     },
-    "autoload": {
-        "psr-4": {
-            "Overtrue\\LaravelPinyin\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Overtrue\\LaravelPinyin\\ServiceProvider"
-            ],
-            "aliases": {
-                "Pinyin": "Overtrue\\LaravelPinyin\\Facades\\Pinyin"
-            }
-        }
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "overtrue",
-            "email": "anzhengchao@gmail.com"
-        }
+    "files": [
+      "src/helpers.php"
     ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Overtrue\\LaravelPinyin\\ServiceProvider"
+      ],
+      "aliases": {
+        "Pinyin": "Overtrue\\LaravelPinyin\\Facades\\Pinyin"
+      }
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "overtrue",
+      "email": "anzhengchao@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "brainmaestro/composer-git-hooks": "dev-master",
+    "laravel/pint": "^1.5"
+  }
 }
