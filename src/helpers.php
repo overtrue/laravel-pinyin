@@ -27,7 +27,7 @@ if (!function_exists('pinyin_abbr')) {
      * @param string $string
      * @param string $delimiter
      *
-     * @return string
+     * @return \Overtrue\Pinyin\Collection
      */
     function pinyin_abbr($string, $delimiter = '')
     {
@@ -80,7 +80,7 @@ if (!function_exists('pinyin_sentence')) {
      * @param string $string
      * @param string $tone
      *
-     * @return string
+     * @return \Overtrue\Pinyin\Collection
      */
     function pinyin_sentence($string, $tone = false)
     {
