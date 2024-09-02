@@ -31,7 +31,7 @@ if (!function_exists('pinyin_abbr')) {
      */
     function pinyin_abbr($string, $delimiter = '')
     {
-        return app(Pinyin::class)->abbr($string, $delimiter);
+        return app(Pinyin::class)->abbr($string)->join($delimiter);
     }
 } else {
     Log::warning('There exist multiple function "pinyin_abbr".');
