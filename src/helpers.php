@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Log;
 use Overtrue\Pinyin\Pinyin;
+use Overtrue\Pinyin\ToneStyle;
 
 if (!function_exists('pinyin')) {
     /**
@@ -12,7 +13,7 @@ if (!function_exists('pinyin')) {
      *
      * @return string
      */
-    function pinyin($string, $option = Pinyin::NONE)
+    function pinyin($string, $option = ToneStyle::NONE)
     {
         return app(Pinyin::class)->convert($string, $option);
     }
