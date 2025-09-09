@@ -9,7 +9,7 @@ Chinese to Pinyin translator for Laravel5 / Lumen based on [overtrue/pinyin](htt
 ## Install
 
 ```shell
-composer require "overtrue/laravel-pinyin:~4.0"
+composer require "overtrue/laravel-pinyin:^6.0"
 ```
 
 ## For Laravel
@@ -90,6 +90,29 @@ echo Pinyin::sentence('带着希望去旅行，比到达终点更美好');
 ```
 
 About `overtrue/pinyin` specific configuration and use, refer to: [overtrue/pinyin](https://github.com/overtrue/pinyin)
+
+## Performance Strategies (New in 6.0)
+
+Laravel-pinyin 6.0 includes support for the new performance optimization strategies introduced in overtrue/pinyin 6.0:
+
+```php
+use Overtrue\Pinyin\Pinyin;
+
+// Memory Optimized (default) - ~400KB memory usage, suitable for web requests
+Pinyin::useMemoryOptimized();
+
+// Cached Strategy - ~4MB memory usage, 2-3x faster for repeated conversions
+Pinyin::useCached();
+
+// Smart Strategy - 600KB-1.5MB memory usage, adaptive loading
+Pinyin::useSmart();
+
+// Auto Strategy - automatically selects the best strategy for your environment
+Pinyin::useAutoStrategy();
+
+// Clear cache when needed (useful in long-running processes)
+Pinyin::clearCache();
+```
 
 ## :heart: Sponsor me 
 
