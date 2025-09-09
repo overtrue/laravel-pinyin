@@ -1,6 +1,6 @@
 # Laravel-Pinyin
 
-Chinese to Pinyin translator for Laravel5 / Lumen based on [overtrue/pinyin](https://github.com/overtrue/pinyin).
+Chinese to Pinyin translator for Laravel based on [overtrue/pinyin](https://github.com/overtrue/pinyin).
 
 [![Latest Stable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/stable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Total Downloads](https://poser.pugx.org/overtrue/laravel-pinyin/downloads.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![Latest Unstable Version](https://poser.pugx.org/overtrue/laravel-pinyin/v/unstable.svg)](https://packagist.org/packages/overtrue/laravel-pinyin) [![License](https://poser.pugx.org/overtrue/laravel-pinyin/license.svg)](https://packagist.org/packages/overtrue/laravel-pinyin)
 
@@ -12,9 +12,7 @@ Chinese to Pinyin translator for Laravel5 / Lumen based on [overtrue/pinyin](htt
 composer require "overtrue/laravel-pinyin:^6.0"
 ```
 
-## For Laravel
-
-(If you are using Laravel >= 5.5, the auto-discovery feature will handle these two steps for you.)
+The auto-discovery feature will handle these two steps for you.
 
 Add the following line to the section `providers` of `config/app.php`:
 
@@ -33,18 +31,6 @@ as optional, you can use facade:
     //...
     'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
 ],
-```
-
-## For Lumen
-
-Add the following line to `bootstrap/app.php` after `// $app->withEloquent();`
-
-```php
-...
-// $app->withEloquent();
-
-$app->register(Overtrue\LaravelPinyin\ServiceProvider::class);
-...
 ```
 
 ## Usage
